@@ -33,7 +33,9 @@ const initialValues = {
   name: '',
   lastName: '',
   role: '',
-  password: ''
+  password: '',
+  fullName:'',
+  status:'pending'
 };
 
 const validationSchema = Yup.object({
@@ -143,9 +145,9 @@ const SignUp = () => {
                   {...getFieldProps('role')}
                 >
                   <option value="">Selecciona el rol</option>
-                  <option value="ADMIN">Administrador</option>
-                  <option value="LEADER">Lider</option>
-                  <option value="STUDENT">Estudiante</option>
+                  <option value="admin">Administrador</option>
+                  <option value="leader">Lider</option>
+                  <option value="student">Estudiante</option>
                 </Form.Select>
                 <Form.Control.Feedback type="invalid">
                   {errors.role}
@@ -159,6 +161,7 @@ const SignUp = () => {
                   placeholder="Contraseña" 
                   isInvalid={touched.password && !!errors.password}
                   {...getFieldProps('password')}
+                  
                 />
                 <Form.Control.Feedback type="invalid">
                   {errors.password}
