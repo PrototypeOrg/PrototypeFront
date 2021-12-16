@@ -1,0 +1,22 @@
+div figure .background{
+    height: 50vh;
+    width: 80vw;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: rgb(234,67,53);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}

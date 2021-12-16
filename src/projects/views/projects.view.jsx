@@ -2,8 +2,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useMutation, useQuery, gql } from '@apollo/client';
 
+import Menu1 from 'components/menu.component';
+import logo from 'projects/styles/proyectos.jpg';
+
 // styles
-import 'projects/styles/projects.styles.scss';
+import 'projects/styles/projects.styles.css';
 
 const REPOSITORIES_QUERY = gql`
   query MyRepositories ($first: Int!){
@@ -73,6 +76,20 @@ const Projects = () => {
 
   return (
     <>
+      <Menu1 />
+      <>
+        <section className="container">
+          <div>
+            <figure>
+              <img src={logo} className="container background" alt="" />
+              <div className="contenido-textos"></div>
+            </figure>
+          </div> 
+        </section>
+        <h2 className="titulo">Proyectos</h2>
+      </>
+
+
       <section className="grid" style={{"--bs-columns": 4, "--bs-gap": '10px 0'}}>
         <span>{'Repository name'}</span>
         <span className="g-col-3">{'Stars count'}</span>

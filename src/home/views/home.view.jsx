@@ -29,7 +29,6 @@ const Home = () => {
               <div className="contenido-textos"></div>
             </figure>
           </div> 
-          <h2 className="titulo">Bienvenido {user.fullName} 👋</h2>
         </section>
 
 
