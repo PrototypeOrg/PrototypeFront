@@ -11,6 +11,7 @@ import Menu1 from 'components/menu.component';
 const USERS = gql `
   query AllUsers {
     allUsers {
+      _id
       email
       documentId
       fullName
@@ -48,8 +49,9 @@ const Users = () => {
                   >
                     <div className="ms-2 me-auto">
                       <div className="fw-bold">{user.fullName}</div>
-                      <div>{user.email} </div>
-                      <div>{user.role}</div>
+                      <div>Email: {user.email} </div>
+                      <div>Rol de Usuario: {user.role}</div>
+                      <div>ID: {user._id}</div>
                     </div>
                   </ListGroup.Item>
               </>
