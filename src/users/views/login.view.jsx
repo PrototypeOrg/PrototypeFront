@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 
-
+import Menu2 from 'components/menu.component2';
 
 
 const LOGIN = gql`
@@ -37,6 +37,7 @@ const Login = () => {
 
   return (
     <Box display="grid" gridTemplateColumns="repeat(4, 1fr)" gap={2}>
+      <Menu2 />
       <Box gridColumn="2 / span 2">
         <Collapse in={error}>
           <Alert severity="error" onClose={() => setError(false)} sx={{ mt: 2 }}>

@@ -10,6 +10,8 @@ import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import { Link } from 'react-router-dom';
 
+import Menu2 from 'components/menu.component2';
+
 const REGISTER = gql`
   mutation Register($input: RegisterInput!) {
     register(input: $input) {
@@ -55,6 +57,7 @@ const SignUp = () => {
 
   return (
     <Row className="mt-3 justify-content-center">
+      <Menu2 />
       <Col lg="5">
         <Alert dismissible variant="danger" onClose={() => setError(false)} show={error}>
           Error regitrando el usuario
